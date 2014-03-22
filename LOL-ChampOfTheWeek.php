@@ -23,6 +23,8 @@
         along with this program; if not, write to the Free Software
         Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
     */
+    require dirname(__FILE__).'/Mustache/Autoloader.php'; // Mustache Template Engine Loader
+
     $COTW_API_KEY = "0b90ba9e-4838-43b6-9e7a-435c5bc333ef";                                                                                                     // API KEY
     $COTW_API_REGION = "euw";                                                                                                                                   // Server REGION
     $COTW_API_URL = "https://prod.api.pvp.net/";                                                                                                                // API URI
@@ -123,8 +125,6 @@
         $COTW_CHAMPLIST = COTW_GetChampionsList();
         $COTW_CHAMPWEEK = COTW_GetChampionsOfTheWeek();
     }
-
-    COTW_Init();
     
     function COTW_Show()
     {
